@@ -5,19 +5,28 @@
 }
 
 body {
-    background-image: url(shopCartBg.jpg);
+    background-image: url(/asset/shopCartBg.jpg);
     background-size: cover;
     color: whitesmoke;
     padding: 2rem;
 }
 
-body > div > div {
+.mainCart {
     background-color: aqua;
-    width: 300px;
+    width: 280px;
+    padding: 1rem;
     color: black;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 10px;
 }
 
 div > img {
     width: 250px;
+    height: 250px;
     border-radius: 10px;
+    margin: auto;
 }
