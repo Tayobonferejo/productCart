@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(shopCartBg.jpg);
+    background-size: cover;
+    color: whitesmoke;
+    padding: 2rem;
+}
+
+body > div > div {
+    background-color: aqua;
+    width: 300px;
+    color: black;
+}
+
+div > img {
+    width: 250px;
+    border-radius: 10px;
+}
