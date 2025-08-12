@@ -12,21 +12,59 @@ body {
 }
 
 .mainCart {
-    background-color: aqua;
-    width: 280px;
-    padding: 1rem;
-    color: black;
 
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+
+    background-color: rgba(120, 110, 166, 0.589);
+    width: 230px;
+    padding: 1rem;
     border-radius: 10px;
 }
 
 div > img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     margin: auto;
 }
+
+.priceDiv {
+    margin: 1rem 0;
+}
+
+.priceDiv > h2 {
+    padding: 0.7rem 0;
+    font-size: 22px;
+}
+
+.tagPrice {
+    color: red;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.shop {
+    color: black;
+    background-color: azure;
+    padding: 0.5rem;
+    border-radius: 20px;
+
+    width: 150px;
+
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 180px
+
+}
+
+.shop:hover {
+    background-color: rgba(0, 255, 255, 0.801);
+    border: 2px solid black;
+}
+
+.imgDesert {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
