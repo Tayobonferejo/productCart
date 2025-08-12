@@ -12,8 +12,6 @@ body {
 }
 
 .mainCart {
-
-
     background-color: rgba(120, 110, 166, 0.589);
     width: 230px;
     padding: 1rem;
@@ -35,6 +33,10 @@ div > img {
 .priceDiv > h2 {
     padding: 0.5rem 0;
     font-size: 22px;
+}
+
+.mainContainer {
+    margin-top: 2rem;
 }
 
 .tagPrice {
@@ -69,3 +71,10 @@ div > img {
     justify-content: center;
 }
 
+.shop.close {
+    display: none;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: brown;
+
+}
