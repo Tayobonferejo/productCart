@@ -37,6 +37,8 @@ div > img {
 
 .mainContainer {
     margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .tagPrice {
@@ -72,9 +74,10 @@ div > img {
 }
 
 .shop.close {
-    display: none;
+    /* display: none; */
     justify-content: space-around;
     flex-direction: row;
     background-color: brown;
 
 }
+
