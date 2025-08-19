@@ -12,6 +12,9 @@ for(let i=0; i<show_pricing.length; i++){
         show_pricing[i].classList.add("close");
         priceIncrease[i].classList.remove("close");
         carts[i]++;
+        counterItem[i].innerText = carts[i];
+        console.log(carts[i]);
         
     })
 }
+

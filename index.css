@@ -91,3 +91,7 @@ div > img {
     background-color: brown;
 
 }
+
+.counter {
+    font-weight: bold;
+}
