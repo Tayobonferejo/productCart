@@ -1,10 +1,13 @@
 const show_pricing = document.querySelectorAll(".shop");
-const priceIncrease = document.querySelectorAll(".quantity")
+const priceIncrease = document.querySelectorAll(".quantity");
 const counterItem = document.querySelectorAll(".counter");
 const increment = document.querySelectorAll(".increaser");
 const decrement = document.querySelectorAll(".decreaser");
+const container = document.getElementById("classSection");
 
-const carts = [0, 0 , 0 , 0 , 0, 0, 0]
+const carts = Array(show_pricing.length).fill(0);
+
+
 
 show_pricing.forEach(function(item, i)
 {
@@ -15,19 +18,24 @@ show_pricing.forEach(function(item, i)
             priceIncrease[i].classList.remove("close");
             carts[i]++;
             counterItem[i].innerText = carts[i];
+            console.log(carts);
 
         }
 
     });
-
-    increment[i].addEventListener("click" ,function(event){
+    if (increment[i]){
+         increment[i].addEventListener("click" ,function(event){
             event.preventDefault();
             carts[i]++;
             counterItem[i].innerText = carts[i];
+            console.log(carts);
 
-    })
+         })
+    }
 
-    decrement[i].addEventListener("click" , function(event){
+    if(decrement[i]){
+
+        decrement[i].addEventListener("click" , function(event){
         event.preventDefault();
 
             if (carts[i] === 1) {
@@ -38,9 +46,13 @@ show_pricing.forEach(function(item, i)
             if(carts[i] > 0) {
                 carts[i]--;
                 counterItem[i].innerText = carts[i];
+                console.log(carts);
+                
             }
 
-    })
+        })
+    }
+
+
 
 })
-
