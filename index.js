@@ -20,6 +20,8 @@ show_pricing.forEach(function(item, i)
             carts[i]++;
             counterItem[i].innerText = carts[i];
             console.log(carts);
+            totalItem.innerText = calculateSum(carts);
+
 
         }
 
@@ -30,6 +32,7 @@ show_pricing.forEach(function(item, i)
             carts[i]++;
             counterItem[i].innerText = carts[i];
             console.log(carts);
+            totalItem.innerText = calculateSum(carts);
 
          })
     }
@@ -48,6 +51,7 @@ show_pricing.forEach(function(item, i)
                 carts[i]--;
                 counterItem[i].innerText = carts[i];
                 console.log(carts);
+                totalItem.innerText = calculateSum(carts);
                 
             }
 
@@ -57,3 +61,12 @@ show_pricing.forEach(function(item, i)
     
 
 })
+
+function calculateSum(carts) {
+    let sum = 0;
+    for (let i = 0; i < carts.length; i++) {
+        sum += carts[i]
+    }
+    console.log(`Current sum: ${sum}`);
+    return sum;
+}
