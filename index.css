@@ -11,6 +11,11 @@ body {
     padding: 2rem;
 }
 
+section {
+    display: flex;
+    gap: 2rem;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -99,4 +104,16 @@ div > img {
 .mainContainer {
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+#classSection {
+    background-color: beige;
+    border-radius: 5px;
+    height: fit-content;
+    width: 100%;
+    padding: 1rem;
+}
+
+#classSection > h2 {
+    color: black
 }

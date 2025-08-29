@@ -4,6 +4,7 @@ const counterItem = document.querySelectorAll(".counter");
 const increment = document.querySelectorAll(".increaser");
 const decrement = document.querySelectorAll(".decreaser");
 const container = document.getElementById("classSection");
+const totalItem = document.getElementById("totalItem")
 
 const carts = Array(show_pricing.length).fill(0);
 
@@ -53,6 +54,6 @@ show_pricing.forEach(function(item, i)
         })
     }
 
-
+    
 
 })
