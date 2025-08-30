@@ -1,11 +1,10 @@
-const show_pricing = document.querySelectorAll(".shop");
+const show_pricing = document.querySelectorAll(".shop"); //  more
 const priceIncrease = document.querySelectorAll(".quantity");
 const counterItem = document.querySelectorAll(".counter");
 const increment = document.querySelectorAll(".increaser");
 const decrement = document.querySelectorAll(".decreaser");
 const container = document.getElementById("classSection");
 const totalItem = document.getElementById("totalItem")
-
 const carts = Array(show_pricing.length).fill(0);
 
 
@@ -58,9 +57,9 @@ show_pricing.forEach(function(item, i)
         })
     }
 
-    
-
 })
+
+// this section of code add the total number of item in each individual cart to an element with in the dom
 
 function calculateSum(carts) {
     let sum = 0;
