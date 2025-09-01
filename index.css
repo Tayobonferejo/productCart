@@ -117,3 +117,24 @@ div > img {
 #classSection > h2 {
     color: black
 }
+
+#classSection > div {
+    background-image: url(/asset/illustration-empty-cart.svg);
+}
+
+#classSection > div > div {
+    display: flex;
+    color: black;
+    justify-content: space-around;
+}
+
+#classSection > div > div > p:nth-child(3) {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
