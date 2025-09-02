@@ -37,7 +37,7 @@ show_pricing.forEach(function(item, i)
     }
 
     if(decrement[i]){
-
+        // sthe minus element event lister
         decrement[i].addEventListener("click" , function(event){
         event.preventDefault();
 
