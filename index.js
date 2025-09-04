@@ -94,7 +94,7 @@ function addToCart() {
         const subTotal = i * priceOfItem[i];
         const singleItem = document.createElement("div");
         singleItem.className = "item_flex";
-        singleItem.innerHTML = `<p>${i} @${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@${carts[i]*priceOfItem[i]}</p> <p><a href="#">delete</a></p>`;
+        singleItem.innerHTML = `<p>${i} @${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@${carts[i]*priceOfItem[i]}</p> <p><a href="#">delete</a></p>`; //table for price list 
         priceBlock.appendChild(singleItem);
     })
 }
