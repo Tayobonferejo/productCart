@@ -117,3 +117,11 @@ div > img {
 #classSection > h2 , #priceSection {
     color: black
 }
+
+.item_flex {
+    display: flex;
+    font-size: larger;
+    padding: 1rem;
+    border: 1px solid black;
+    gap: 2rem;
+}

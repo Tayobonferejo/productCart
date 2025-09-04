@@ -82,9 +82,8 @@ function calculateSum(carts) {
 
 
 function renderCart(i) {
-    carts[i] +=1;
-
     //store this click order
+    let totalSum = 0;
     cartHistory.push(i)
     addToCart();
 }
@@ -93,10 +92,10 @@ function addToCart() {
     const uniqueOrder = [...new Set(cartHistory)]
     uniqueOrder.forEach((i)=> {
         const subTotal = i * priceOfItem[i];
-        const singleItem = document.createElement("p");
-        singleItem.innerHTML = `${i} @${priceOfItem[i]} @${subTotal} @${carts[i]} @${carts[i]} @${priceOfItem[i]}`;
+        const singleItem = document.createElement("div");
+        singleItem.className = "item_flex";
+        singleItem.innerHTML = `<p>${i} @${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@${carts[i]*priceOfItem[i]}</p> <p><a href="#">delete</a></p>`;
         priceBlock.appendChild(singleItem);
-        i++;
     })
 }
 
