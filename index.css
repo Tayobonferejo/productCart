@@ -102,7 +102,7 @@ div > img {
 }
 
 .mainContainer {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -114,6 +114,6 @@ div > img {
     padding: 1rem;
 }
 
-#classSection > h2 {
+#classSection > h2 , #priceSection {
     color: black
 }

@@ -6,8 +6,9 @@ const decrement = document.querySelectorAll(".decreaser"); // decreasing minus s
 const container = document.getElementById("classSection");
 const totalItem = document.getElementById("totalItem") // id that output the totol number of individual iten
 const carts = Array(show_pricing.length).fill(0);
-const priceBlock = document.getElementById("priceSection")
-
+const priceBlock = document.getElementById("priceSection");
+let cartHistory = [];
+const priceOfItem = [6.50,7.00,8.00,5.50,4.00,5.00,4.50,4.50];
 
 // add event listener to chnange the  cart section to the increase and decrease section
 
@@ -23,12 +24,8 @@ show_pricing.forEach(function(item, i)
             counterItem[i].innerText = carts[i];
             console.log(carts);
             totalItem.innerText = calculateSum(carts);
-
-            const singleItem = document.createElement("p");
             const multipeItem = document.createElement("p");
-            
-            singleItem.innerHTML = `${[i]} is ${carts[i]}`;
-            priceBlock.appendChild(singleItem);
+            renderCart(i);
             console.log(priceBlock);
 
         }
@@ -43,6 +40,7 @@ show_pricing.forEach(function(item, i)
             counterItem[i].innerText = carts[i];
             console.log(carts);
             totalItem.innerText = calculateSum(carts);
+            renderCart(i);
 
          })
     }
@@ -62,6 +60,7 @@ show_pricing.forEach(function(item, i)
                 counterItem[i].innerText = carts[i];
                 console.log(carts);
                 totalItem.innerText = calculateSum(carts);
+                renderCart(i);
                 
             }
 
@@ -80,3 +79,24 @@ function calculateSum(carts) {
     console.log(`Current sum: ${sum}`);
     return sum;
 }
+
+
+function renderCart(i) {
+    carts[i] +=1;
+
+    //store this click order
+    cartHistory.push(i)
+    addToCart();
+}
+function addToCart() {
+    priceBlock.innerHTML = "";
+    const uniqueOrder = [...new Set(cartHistory)]
+    uniqueOrder.forEach((i)=> {
+        const subTotal = i * priceOfItem[i];
+        const singleItem = document.createElement("p");
+        singleItem.innerHTML = `${i} @${priceOfItem[i]} @${subTotal} @${carts[i]} @${carts[i]} @${priceOfItem[i]}`;
+        priceBlock.appendChild(singleItem);
+        i++;
+    })
+}
+
