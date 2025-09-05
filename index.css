@@ -13,6 +13,7 @@ body {
 
 section {
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -91,7 +92,7 @@ div > img {
 }
 
 .quantity {
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     background-color: brown;
 
@@ -110,7 +111,7 @@ div > img {
     background-color: beige;
     border-radius: 5px;
     height: fit-content;
-    width: 100%;
+    width: 30%;
     padding: 1rem;
 }
 
@@ -120,6 +121,7 @@ div > img {
 
 .item_flex {
     display: flex;
+    justify-content: space-evenly;
     font-size: larger;
     padding: 1rem;
     border: 1px solid black;

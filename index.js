@@ -10,6 +10,8 @@ const priceBlock = document.getElementById("priceSection");
 let cartHistory = [];
 const priceOfItem = [6.50,7.00,8.00,5.50,4.00,5.00,4.50,4.50];
 
+const totalPrice = document.getElementById("totalSection")
+
 // add event listener to chnange the  cart section to the increase and decrease section
 
 
@@ -83,7 +85,6 @@ function calculateSum(carts) {
 
 function renderCart(i) {
     //store this click order
-    let totalSum = 0;
     cartHistory.push(i)
     addToCart();
 }
@@ -91,11 +92,20 @@ function addToCart() {
     priceBlock.innerHTML = "";
     const uniqueOrder = [...new Set(cartHistory)]
     uniqueOrder.forEach((i)=> {
-        const subTotal = i * priceOfItem[i];
+
+        let totalSum = 0;
+
+        const itemQuantity = carts[i];
+        const subTotal= itemQuantity*priceOfItem[i];
+        totalSum += subTotal;
+
         const singleItem = document.createElement("div");
         singleItem.className = "item_flex";
-        singleItem.innerHTML = `<p>${i} @${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@${carts[i]*priceOfItem[i]}</p> <p><a href="#">delete</a></p>`; //table for price list 
+        singleItem.innerHTML = `<p>${i} @$${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@$${subTotal}</p> <p><a href="#">delete</a></p>`; //table for price list 
+        console.log(subTotal);
         priceBlock.appendChild(singleItem);
+
+        totalPrice.innerHTML = `<p>${totalSum}</p>`
     })
 }
 
