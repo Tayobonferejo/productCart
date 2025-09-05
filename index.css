@@ -127,3 +127,14 @@ div > img {
     border: 1px solid black;
     gap: 2rem;
 }
+
+#totalSection {
+    color: black;
+}
+
+#totalSection > p {
+    padding: 1rem;
+    background-color: red;
+    font-size: 32px;
+
+}

@@ -91,9 +91,9 @@ function renderCart(i) {
 function addToCart() {
     priceBlock.innerHTML = "";
     const uniqueOrder = [...new Set(cartHistory)]
-    uniqueOrder.forEach((i)=> {
+    let totalSum = 0;
 
-        let totalSum = 0;
+    uniqueOrder.forEach((i)=> {
 
         const itemQuantity = carts[i];
         const subTotal= itemQuantity*priceOfItem[i];
@@ -101,11 +101,25 @@ function addToCart() {
 
         const singleItem = document.createElement("div");
         singleItem.className = "item_flex";
-        singleItem.innerHTML = `<p>${i} @$${priceOfItem[i]}</p> <p>@${carts[i]} </p> <p>@$${subTotal}</p> <p><a href="#">delete</a></p>`; //table for price list 
-        console.log(subTotal);
+        singleItem.innerHTML = `<p>${i} @$${priceOfItem[i]}</p>
+                                <p>@${carts[i]} </p> 
+                                <p>@$${subTotal}</p> 
+                                <p><a href="#" class="deleteLink">delete</a></p>`; //table for price list 
+        
+
+        const deleteLink = singleItem.querySelector(".deleteLink");
+
+        deleteLink.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            carts[i] = 0;
+            cartHistory = cartHistory.filter(item => item !==i);
+
+            addToCart();
+        })
         priceBlock.appendChild(singleItem);
 
-        totalPrice.innerHTML = `<p>${totalSum}</p>`
+        totalPrice.innerHTML = `<p>Total sum: $${totalSum}</p>`;
     })
 }
 
