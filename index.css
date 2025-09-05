@@ -102,7 +102,7 @@ div > img {
 }
 
 .mainContainer {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -114,17 +114,14 @@ div > img {
     padding: 1rem;
 }
 
-#classSection > h2 {
+#classSection > h2 , #priceSection {
     color: black
 }
 
-#classSection > div {
-    background-image: url(/asset/illustration-empty-cart.svg);
-}
-
-#classSection > div > div {
+.item_flex {
     display: flex;
-    color: black;
-    justify-content: space-around;
+    font-size: larger;
+    padding: 1rem;
+    border: 1px solid black;
+    gap: 2rem;
 }
-
